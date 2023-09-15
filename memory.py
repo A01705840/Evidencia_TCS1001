@@ -63,12 +63,19 @@ def tap(x, y):
         hide[mark] = False
         state['mark'] = None
 
+    # Contador de taps
+
     global taps
     taps += 1  # Se incrementa el número de taps
     print("Taps: ", taps)  # Se imprime el número de taps
 
-# Dibuja el tablero.
+    # Checar si todos los mosaicos están descubiertos
 
+    if True not in hide:
+        print("Todos los mosaicos han sido descubiertos")
+
+
+# Dibuja el tablero.
 
 def draw():
     tt.clear()
