@@ -21,8 +21,10 @@ car = fg.path('car.gif')
 tiles = list(range(32)) * 2
 state = {'mark': None}
 hide = [True] * 64
+taps = 0
 
 # Dibuja un cuadrado en la posición (x, y).
+
 
 def square(x, y):
     tt.up()
@@ -43,10 +45,12 @@ def index(x, y):
 
 # Convierte el índice de mosaico en coordenadas (x, y).
 
+
 def xy(count):
     return (count % 8) * 50 - 200, (count // 8) * 50 - 200
 
 # Actualiza el marcador y los mosaicos ocultos basados en el toque.
+
 
 def tap(x, y):
     spot = index(x, y)
@@ -59,7 +63,12 @@ def tap(x, y):
         hide[mark] = False
         state['mark'] = None
 
+    global taps
+    taps += 1  # Se incrementa el número de taps
+    print("Taps: ", taps)  # Se imprime el número de taps
+
 # Dibuja el tablero.
+
 
 def draw():
     tt.clear()
@@ -85,6 +94,7 @@ def draw():
     tt.ontimer(draw, 100)
 
 # Inicializa los mosaicos ocultos.
+
 
 rd.shuffle(tiles)
 
