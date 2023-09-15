@@ -8,3 +8,9 @@ Realicé las correcciones en el juego de memoria para que cumplan con las reglas
 
 - Contar y desplegar en cosnola el numero de taps
 - Detectar cuando todos los cuadros se han destapado e imprimir un mensaje en consola
+
+### María José Soto Castro A01705840 - https://github.com/A01705840
+
+- Realizar las correcciones para el juego de Pacman cumpliendo las reglas del PEP8.
+- Cambiar el tablero (a naranje y azul)
+- Hacer que los fantasmas y pacman ir mas rápido
